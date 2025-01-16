@@ -1,8 +1,10 @@
 # First challenge: https://adventofcode.com/2024/day/1
 
 # Requirements
-# - Receive 2 lists of numbers
-# - Find distance between numbers ordered by position
+# - Read a file with 2 lists of numbers
+# - Order lists
+# - Find distances between numbers in the same position
+# - Sum distances and return
 # Lists
 # 3   4
 # 4   3
@@ -12,6 +14,10 @@
 # 3   3
 # Result
 # 2 + 1 + 0 + 1 + 2 + 5 = 11
+
+# Reasoning
+# - Since we will be reading from file, at each line we can start inserting numbers in order
+# - After that all we need is to iterate in order, get the absolute distance and sum them all
 
 def insertOrdered(num_list = [], number = 0):
     length = len(num_list)
